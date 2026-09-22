@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comece sua operação de entregas grátis por 7 dias</title>
+<meta name="description" content="Teste grátis por 7 dias. Sem cartão, sem compromisso." />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1071777455439100');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1071777455439100&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<style>
+  :root{
+    --navy-950:#0d1730; --navy-800:#16233f; --navy-700:#1f2f52;
+    --orange-600:#f2542d; --orange-700:#d43e1a; --orange-100:#fde6dd;
+    --mint-600:#1c9a52; --mint-100:#e2f6ea;
+    --ink:#16213d; --ink-soft:#5b6478;
+    --paper:#f6f7f5; --card:#ffffff; --line:#e4e6ea;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif;background:var(--paper);color:var(--ink);}
+  h1,h2,h3,h4{font-family:'Sora',ui-sans-serif,system-ui,sans-serif;}
+  img,svg{max-width:100%;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2.5px solid var(--orange-600);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.001ms !important;} }
+
+  header.top{padding:18px 0;position:relative;z-index:20;}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.01em;}
+  .brand-dot{width:11px;height:11px;border-radius:3px;background:var(--orange-600);}
+  .badge{font-size:12.5px;font-weight:600;color:var(--mint-600);background:var(--mint-100);padding:6px 12px;border-radius:999px;white-space:nowrap;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--navy-950) 0%,var(--navy-800) 60%,var(--navy-700) 100%);color:#fff;padding:44px 0 64px;border-radius:0 0 28px 28px;}
+  .route-deco{position:absolute;top:-10px;right:-40px;width:56%;max-width:520px;opacity:.55;pointer-events:none;}
+  @media(max-width:900px){.route-deco{display:none;}}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:start;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px;}}
+  .hero-copy{animation:riseIn .6s ease-out both;}
+  @keyframes riseIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  .eyebrow{color:#ffb59c;font-weight:600;font-size:14.5px;margin:0 0 12px;}
+  h1{font-size:clamp(28px,4.2vw,44px);line-height:1.1;font-weight:800;letter-spacing:-0.02em;margin:0 0 16px;max-width:20ch;}
+  .sub{font-size:17px;line-height:1.6;color:#dfe2ef;max-width:48ch;margin:0 0 26px;}
+  .sub b{color:#fff;}
+  .bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:13px;}
+  .bullets li{display:flex;gap:11px;font-size:15px;color:#eef0f8;align-items:flex-start;}
+  .check{flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:var(--orange-600);display:flex;align-items:center;justify-content:center;margin-top:1px;}
+
+  .card{background:var(--card);border-radius:18px;padding:26px;box-shadow:0 24px 50px -18px rgba(13,23,48,0.5);}
+  .card-tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--orange-700);background:var(--orange-100);padding:5px 11px;border-radius:999px;margin-bottom:12px;}
+  .card h2{font-size:20px;margin:0 0 4px;font-weight:700;color:var(--ink);}
+  .card .hint{font-size:13.5px;color:var(--ink-soft);margin:0 0 18px;}
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--ink-soft);margin:0 0 6px;}
+  .field{margin-bottom:13px;}
+  input,select{width:100%;padding:11px 13px;border-radius:10px;border:1.5px solid var(--line);font-family:inherit;font-size:15px;background:#fff;color:var(--ink);}
+  input:focus,select:focus{outline:none;border-color:var(--orange-600);box-shadow:0 0 0 3px rgba(242,84,45,.16);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:480px){.row2{grid-template-columns:1fr;}}
+  .submit-btn{width:100%;padding:14px 16px;border:none;border-radius:12px;background:var(--orange-600);color:#fff;font-weight:700;font-size:15.5px;cursor:pointer;margin-top:4px;transition:filter .15s, transform .1s;}
+  .submit-btn:hover{filter:brightness(1.05);}
+  .submit-btn:active{transform:translateY(1px);}
+  .submit-btn:disabled{opacity:.6;cursor:default;}
+  .fine{font-size:12px;color:var(--ink-soft);text-align:center;margin-top:12px;line-height:1.5;}
+  .ok-box{text-align:center;padding:22px 6px;}
+  .ok-icon{width:52px;height:52px;border-radius:50%;background:var(--mint-100);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .ok-box h2{margin-bottom:8px;}
+  .ok-box p{color:var(--ink-soft);font-size:15px;line-height:1.55;}
+  .err{color:#b91c1c;font-size:13.5px;margin-top:10px;text-align:center;}
+
+  /* STATS BAND */
+  section.stats{background:var(--navy-950);color:#fff;padding:26px 0;}
+  .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);}
+  @media(max-width:700px){.stats-inner{grid-template-columns:1fr;gap:18px;}}
+  .stat{text-align:center;padding:6px 18px;border-left:1px solid rgba(255,255,255,.12);}
+  .stat:first-child{border-left:none;}
+  @media(max-width:700px){.stat{border-left:none;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;}.stat:first-child{border-top:none;padding-top:0;}}
+  .stat b{display:block;font-family:'Sora',sans-serif;font-size:24px;color:var(--orange-600);font-weight:700;}
+  .stat.free b{color:var(--mint-600);}
+  .stat span{font-size:13.5px;color:#c9cdda;}
+
+  /* FEATURES */
+  section.features{padding:52px 0 56px;}
+  .features-head{max-width:56ch;margin:0 0 34px;}
+  .features h3{font-size:25px;font-weight:700;letter-spacing:-0.01em;margin:0 0 10px;}
+  .features-head p{margin:0;color:var(--ink-soft);font-size:15.5px;line-height:1.6;}
+  .feat-list{position:relative;display:flex;flex-direction:column;gap:0;max-width:640px;}
+  .feat-list::before{content:"";position:absolute;left:23px;top:12px;bottom:12px;width:2px;background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);}
+  .feat-row{position:relative;display:flex;gap:18px;padding:20px 0;align-items:flex-start;}
+  .feat-ic{position:relative;flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:var(--card);border:1.5px solid var(--line);color:var(--orange-600);display:flex;align-items:center;justify-content:center;}
+  .feat-row h4{margin:2px 0 6px;font-size:16.5px;font-weight:700;}
+  .feat-row p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.55;max-width:46ch;}
+
+  /* FAQ */
+  section.faq{padding:8px 0 60px;}
+  .faq-inner{max-width:720px;}
+  .faq h3{font-size:23px;font-weight:700;margin:0 0 20px;}
+  details.qa{padding:16px 0;border-bottom:1px solid var(--line);}
+  details.qa summary{list-style:none;cursor:pointer;font-size:15.5px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+  details.qa summary::-webkit-details-marker{display:none;}
+  details.qa summary::after{content:"+";flex:0 0 auto;font-size:20px;color:var(--orange-600);font-weight:600;}
+  details.qa[open] summary::after{content:"–";}
+  details.qa p{margin:10px 0 0;color:var(--ink-soft);font-size:14.5px;line-height:1.6;}
+
+  footer{padding:24px 0 96px;border-top:1px solid var(--line);}
+  .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--ink-soft);}
+  @media(min-width:701px){footer{padding-bottom:34px;}}
+
+  /* MOBILE STICKY CTA */
+  .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -10px 26px rgba(13,23,48,.12);}
+  .mobile-cta a{display:block;text-align:center;background:var(--orange-600);color:#fff;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none;}
+  @media(max-width:700px){.mobile-cta{display:block;}}
+
+  #lead-form{scroll-margin-top:20px;}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+const { useState } = React;
+
+// Endpoint sem backend: FormSubmit envia o conteúdo do formulário direto
+// para o e-mail configurado. Antes do primeiro lead cair na caixa de
+// entrada, o FormSubmit manda um e-mail de confirmação para
+// suporte@thiagoflausino.com que precisa ser aberto e confirmado uma
+// única vez para ativar o endpoint.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/suporte@thiagoflausino.com";
+
+function getUtm() {
+  const p = new URLSearchParams(window.location.search);
+  const keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  const out = {};
+  keys.forEach(k => { if (p.get(k)) out[k] = p.get(k); });
+  return out;
+}
+
+function Check() {
+  return (
+    <span className="check">
+      <svg width="12" height="12" viewBox="0 0 20 20" fill="none">
+        <path d="M4 10.5L8 14.5L16 6" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </span>
+  );
+}
+
+function RouteDeco() {
+  return (
+    <svg className="route-deco" viewBox="0 0 560 420" fill="none" aria-hidden="true">
+      <path d="M20 360 C 150 360, 110 200, 250 190 S 430 60, 540 55" stroke="rgba(255,255,255,0.22)" strokeWidth="3" strokeDasharray="2 15" strokeLinecap="round"/>
+      <circle cx="20" cy="360" r="7" fill="#f2542d"/>
+      <circle cx="540" cy="55" r="7" fill="#1c9a52"/>
+    </svg>
+  );
+}
+
+function IconDashboard(){
+  return (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.8"/><rect x="13" y="3" width="8" height="5" rx="2" stroke="currentColor" strokeWidth="1.8"/><rect x="13" y="10" width="8" height="11" rx="2" stroke="currentColor" strokeWidth="1.8"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" strokeWidth="1.8"/></svg>);
+}
+function IconPin(){
+  return (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" strokeWidth="1.8"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" strokeWidth="1.8"/></svg>);
+}
+function IconWallet(){
+  return (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2.4" stroke="currentColor" strokeWidth="1.8"/><path d="M3 10h18" stroke="currentColor" strokeWidth="1.8"/><circle cx="16.5" cy="14.2" r="1.3" fill="currentColor"/></svg>);
+}
+
+function LeadForm() {
+  const [status, setStatus] = useState("idle"); // idle | loading | ok | error
+  const [form, setForm] = useState({
+    nome: "", negocio: "", whatsapp: "", email: "", cidade: "", volume: ""
+  });
+
+  function update(field) {
+    return (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus("loading");
+    const payload = {
+      _subject: `Novo lead - teste grátis (${form.negocio || form.nome})`,
+      "Nome completo": form.nome,
+      "Nome do negócio/operação": form.negocio,
+      WhatsApp: form.whatsapp,
+      "E-mail": form.email,
+      "Cidade/Estado": form.cidade,
+      "Volume estimado de entregas/mês": form.volume,
+      "Página de origem": window.location.href,
+      ...getUtm(),
+    };
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("fail");
+      if (typeof fbq === "function") {
+        fbq("track", "Lead");
+      }
+      setStatus("ok");
+    } catch (err) {
+      setStatus("error");
+    }
+  }
+
+  if (status === "ok") {
+    return (
+      <div className="card ok-box">
+        <div className="ok-icon">
+          <svg width="24" height="24" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10.5L8 14.5L16 6" stroke="#1c9a52" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        <h2>Recebemos seus dados!</h2>
+        <p>Nossa equipe vai te chamar no WhatsApp em até 1 dia útil para liberar seu teste grátis de 7 dias. Fique de olho na caixa de mensagens.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form className="card" onSubmit={handleSubmit}>
+      <span className="card-tag">7 dias grátis · sem cartão</span>
+      <h2>Comece seu teste grátis</h2>
+      <p className="hint">Preencha em menos de 1 minuto e nossa equipe te chama no WhatsApp.</p>
+
+      <div className="field">
+        <label htmlFor="nome">Nome completo</label>
+        <input id="nome" required value={form.nome} onChange={update("nome")} placeholder="Seu nome" />
+      </div>
+
+      <div className="field">
+        <label htmlFor="negocio">Nome do negócio ou operação</label>
+        <input id="negocio" required value={form.negocio} onChange={update("negocio")} placeholder="Ex: Entregas Rio Preto" />
+      </div>
+
+      <div className="row2">
+        <div className="field">
+          <label htmlFor="whatsapp">WhatsApp</label>
+          <input id="whatsapp" required value={form.whatsapp} onChange={update("whatsapp")} placeholder="(00) 00000-0000" />
+        </div>
+        <div className="field">
+          <label htmlFor="cidade">Cidade/UF</label>
+          <input id="cidade" value={form.cidade} onChange={update("cidade")} placeholder="Sua cidade" />
+        </div>
+      </div>
+
+      <div className="field">
+        <label htmlFor="email">E-mail</label>
+        <input id="email" type="email" required value={form.email} onChange={update("email")} placeholder="voce@email.com" />
+      </div>
+
+      <div className="field">
+        <label htmlFor="volume">Quantas entregas por mês, hoje?</label>
+        <select id="volume" required value={form.volume} onChange={update("volume")}>
+          <option value="" disabled>Selecione</option>
+          <option>Ainda não comecei</option>
+          <option>Até 50</option>
+          <option>50 a 200</option>
+          <option>200 a 500</option>
+          <option>Mais de 500</option>
+        </select>
+      </div>
+
+      <button className="submit-btn" type="submit" disabled={status === "loading"}>
+        {status === "loading" ? "Enviando..." : "Quero meu teste grátis"}
+      </button>
+      {status === "error" && (
+        <p className="err">Não conseguimos enviar agora. Tente novamente em instantes.</p>
+      )}
+      <p className="fine">Ao enviar, você concorda em ser contatado por WhatsApp e e-mail sobre o teste grátis.</p>
+    </form>
+  );
+}
+
+function Page() {
+  return (
+    <React.Fragment>
+      <header className="top">
+        <div className="wrap top-inner">
+          <div className="brand"><span className="brand-dot" /> Sistema de Entregas</div>
+          <span className="badge">Teste grátis · 7 dias</span>
+        </div>
+      </header>
+
+      <section className="hero">
+        <RouteDeco />
+        <div className="wrap hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Para donos de operação e estabelecimentos</p>
+            <h1>Ainda dá tempo de colocar sua operação de entregas de pé</h1>
+            <p className="sub">
+              Você chegou até aqui pelo anúncio — falta só um passo. <b>Teste grátis por 7 dias</b>,
+              sem cartão, sem compromisso. Se fizer sentido pra você, o plano básico sai por
+              R$ 99/mês. Se não, não cobramos nada.
+            </p>
+            <ul className="bullets">
+              <li><Check /> Rastreio ao vivo dos entregadores, direto pelo WhatsApp</li>
+              <li><Check /> Carteira digital com repasses automáticos</li>
+              <li><Check /> Comissão bem menor que apps tradicionais de entrega</li>
+              <li><Check /> Configuração em minutos, sem fidelidade</li>
+            </ul>
+          </div>
+          <div id="lead-form">
+            <LeadForm />
+          </div>
+        </div>
+      </section>
+
+      <section className="stats">
+        <div className="wrap stats-inner">
+          <div className="stat"><b>7 dias</b><span>de teste grátis, sem cartão</span></div>
+          <div className="stat"><b>R$ 99/mês</b><span>plano básico, só se você quiser continuar</span></div>
+          <div className="stat free"><b>0 cobrança</b><span>se você não seguir com o plano</span></div>
+        </div>
+      </section>
+
+      <section className="features">
+        <div className="wrap">
+          <div className="features-head">
+            <h3>Tudo que você precisa pra rodar a operação</h3>
+            <p>Cadastro, rastreio e financeiro dos entregadores em um só lugar — sem planilha e sem grupo de WhatsApp bagunçado.</p>
+          </div>
+          <div className="feat-list">
+            <div className="feat-row">
+              <span className="feat-ic"><IconDashboard/></span>
+              <div>
+                <h4>Painel da operação</h4>
+                <p>Cadastre entregadores e estabelecimentos e acompanhe tudo em um só lugar.</p>
+              </div>
+            </div>
+            <div className="feat-row">
+              <span className="feat-ic"><IconPin/></span>
+              <div>
+                <h4>Rastreio em tempo real</h4>
+                <p>Cada entrega é acompanhada ao vivo, com atualização direto no WhatsApp do cliente.</p>
+              </div>
+            </div>
+            <div className="feat-row">
+              <span className="feat-ic"><IconWallet/></span>
+              <div>
+                <h4>Financeiro simples</h4>
+                <p>Carteira digital com repasses automáticos para os entregadores, sem planilha.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq">
+        <div className="wrap faq-inner">
+          <h3>Perguntas comuns</h3>
+          <details className="qa" open>
+            <summary>Vou pagar alguma coisa depois dos 7 dias?</summary>
+            <p>Não. O teste é gratuito. Só existe cobrança se você decidir ativar o plano básico de R$ 99/mês por conta própria.</p>
+          </details>
+          <details className="qa">
+            <summary>Preciso cadastrar cartão de crédito?</summary>
+            <p>Não. O acesso ao teste é liberado direto pela nossa equipe, sem dados de pagamento.</p>
+          </details>
+          <details className="qa">
+            <summary>Como eu recebo o acesso?</summary>
+            <p>Depois de enviar seus dados, nossa equipe entra em contato pelo WhatsApp para liberar seu login.</p>
+          </details>
+        </div>
+      </section>
+
+      <footer>
+        <div className="wrap foot-inner">
+          <span>Sistema de Entregas</span>
+          <span>Dúvidas: suporte@thiagoflausino.com</span>
+        </div>
+      </footer>
+
+      <div className="mobile-cta">
+        <a href="#lead-form">Quero meu teste grátis</a>
+      </div>
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Page />);
+</script>
+</body>
+</html>
